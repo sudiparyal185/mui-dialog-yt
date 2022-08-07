@@ -12,9 +12,7 @@ import {
 export const MuiDialog = ({ isDialogOpen, handleCloseDialog }) => {
   const dialogTitle = (
     <>
-      <Typography variant='h1' sx={{ fontSize: '1.5rem', fontWeight: 800 }}>
-        Please review user agreement
-      </Typography>
+      <Typography variant='h1'>Please review user agreement</Typography>
     </>
   );
   const dialogContent = (
@@ -28,20 +26,10 @@ export const MuiDialog = ({ isDialogOpen, handleCloseDialog }) => {
 
   const dialogActions = (
     <>
-      <Button
-        variant='contained'
-        color='error'
-        onClick={handleCloseDialog}
-        sx={{ textTransform: 'inherit' }}
-      >
+      <Button variant='contained' color='secondary' onClick={handleCloseDialog}>
         Disagree
       </Button>
-      <Button
-        variant='contained'
-        color='secondary'
-        onClick={handleCloseDialog}
-        sx={{ textTransform: 'inherit' }}
-      >
+      <Button variant='contained' color='primary' onClick={handleCloseDialog}>
         Agree
       </Button>
     </>
